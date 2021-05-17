@@ -15,7 +15,7 @@ class Eval(commands.Cog):
         logger.info("EvalCMD: Cog Loaded!")
 
     @commands.command(name='eval')
-    @commands.has_role("Bot Manager")
+    @commands.is_owner()
     async def _eval(self, ctx, *, body):
         """Evaluates python code"""
         env = {
